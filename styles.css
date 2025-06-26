@@ -110,6 +110,10 @@ nav{
 h1{
     font-size: 5em;
 }
+
+nav{
+    
+}
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
