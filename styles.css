@@ -189,7 +189,10 @@ h2{
 
 h3{
     font-size: 1.5em;
-    padding: .5em;
+}
+
+h2, h3{
+    font-weight: bold;
 }
 
 #hero p{
@@ -223,6 +226,10 @@ h3{
     padding: 1em 0 2em 0;
 }
 
+#services h3{
+    padding: .5em;
+}
+
 #services section{
     background-color: var(--blue);
     color: var(--white);
@@ -237,6 +244,18 @@ h3{
     margin: 0 auto;
     margin-top: 3em;
     padding: 1em;
+}
+
+#results h2, #results h3{
+    padding: .5em;
+}
+
+#results h3{
+    padding-bottom: 1em;
+}
+
+#results p{
+    padding: 1em 0;
 }
 
 table{
@@ -276,6 +295,19 @@ tr:nth-child(3), tr:nth-child(5){
 #contact{
     background-color: var(--black);
     color: var(--white);
+    padding: 1em;
+}
+
+label{
+    display: inline-block;
+    text-align: right;
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2em;
 }
 
 
