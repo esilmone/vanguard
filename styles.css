@@ -66,6 +66,7 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 main{
     min-width: 400px;
+    overflow: hidden;
 }
 
 header{
@@ -235,6 +236,7 @@ h3{
     color: var(--white);
     margin: 0 auto;
     margin-top: 3em;
+    padding: 1em;
 }
 
 table{
@@ -263,6 +265,12 @@ td{
 
 tr:nth-child(3), tr:nth-child(5){
     background-color: var(--charcoal);
+}
+
+#growth{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1.5em 0;
 }
 
 #contact{
