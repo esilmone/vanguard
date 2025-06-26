@@ -298,9 +298,37 @@ tr:nth-child(3), tr:nth-child(5){
     padding: 1em;
 }
 
+#contact p{
+    margin: 1em auto;
+}
+
+form{
+    margin: .5em;
+}
+
 label{
     display: inline-block;
     text-align: right;
+    margin-bottom: .5em;
+}
+
+input[type=text], input[type=email], textarea{
+    box-sizing: border-box;
+    width: 80vw;
+    height: 3em;
+    border: var(--blue);
+}
+
+textarea{
+    height: 6em;
+}
+
+input[type=submit]{
+    width: 80vw;
+    height: 4em;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
 }
 
 footer{
@@ -308,6 +336,10 @@ footer{
     color: var(--white);
     text-align: center;
     padding: 2em;
+}
+
+footer a{
+    color: var(--blue);
 }
 
 
