@@ -71,17 +71,14 @@ main{
 
 header{
     display: flex;
-    max-width: 100vw;
+    width: 100vw;
     background-color: var(--black);
     box-shadow: var(--blue) 0px 5px 10px;
     color: var(--blue);
 }
 
-nav{
-    align-items: flex-end;
-}
-
 nav ul{
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -101,10 +98,12 @@ nav li a{
     font-weight: bold;
     text-decoration: none;
     color: var(--blue);
+    transition: background-color .5s ease-in;
 }
 
 nav a:hover, nav input:hover{
-    background-color: var(--black);
+    background-color: var(--blue);
+    color: var(--black);
 }
 
 nav label{
@@ -120,6 +119,7 @@ label span{
     height: .25em;
     position: relative;
     width: 2em;
+    transition: background-color .5s ease-in;
 }
 
 label span::before, label span::after{
@@ -129,6 +129,7 @@ label span::before, label span::after{
     position: absolute;
     width: 2em;
     height: 100%;
+    transition: background-color .5s ease-in;
 }
 
 label span::before{
@@ -139,13 +140,18 @@ label span::after{
     top: -.75em;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]{
     display: none;
 }
 
 input:checked ~ ul{
     max-height: 500px;
 }
+
+input:checked ~ label:not(.steps) span::before, input:checked ~ label:not(.steps) span::after{
+    top: 0;
+}
+
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -182,17 +188,22 @@ h1{
     font-size: 3em;
 }
 
-h2{
+h2, h3{
     font-size: 2em;
+    font-weight: bold;
     padding: 0;
+    animation-name: textFall;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes textFall{
+    0% {transform: translate(0px, -20px);}
+    100% {transform: translate(0px, 0px);}
 }
 
 h3{
     font-size: 1.5em;
-}
-
-h2, h3{
-    font-weight: bold;
 }
 
 #hero p{
@@ -236,6 +247,15 @@ h2, h3{
     margin: 1em;
     padding: 1em;
     border-radius: 15px;
+    transform: translate(0px, 0px);
+    transition: transform .25s ease-in-out;
+    transition-timing-function: ease-in;
+}
+
+#services section:hover{
+    transform: translate(0px, -10px);
+    transition: transform .25s ease-in-out;
+    transition-timing-function: ease-in;
 }
 
 #results{
@@ -338,6 +358,10 @@ footer{
     padding: 2em;
 }
 
+footer p{
+    padding: .2em;
+}
+
 footer a{
     color: var(--blue);
 }
@@ -398,7 +422,31 @@ footer a{
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width: 800px){
+    header{
+        display: flex;
+    }
+    nav ul{
+        overflow: visible;
+        position: absolute;
+        top: 1.5em;
+        left: .5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    nav li a{
+        display: inline-block;
+        /* position: relative;
+        top: 3em;
+        left: 400px;
+        padding: .5em; */
+    }
+    nav{
+        font-size: 2em;
+    }
+    label span, input{
+        display: none;
+    }
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -412,6 +460,7 @@ footer a{
     .bar-chart {
         width: 50%;
     }
+}
 
 
 /* MEDIA QUERIES (LARGE) */
