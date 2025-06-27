@@ -565,33 +565,46 @@ footer a{
         flex-direction: column;
         margin: .5em;
     }
-    table{
+    /* table{
         width: 50%;
         position: relative;
         left: -12em;
     }
     #bar-chart-grid{
-        /* width: 50%; */
+        width: 50%;
         position: relative;
         left: -15em;
     }
     #contact{
         display:grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto;
+
     }
     #contact-grid{
         display: flex;
-        /* margin: 0 auto;
+        flex-direction: column;
+        margin: 0 auto;
         max-width: 90vw;
         position: relative;
-        left: -7em; */
+        left: -7em;
+    }
+    
+    #industry{
+        grid-column: 2 / 3;
+    } */
+    /* #contact{
+        position: relative;
+        left: -15em;
+    } */
+    form{
+        display: grid;
+        grid-template-columns: auto auto;
     }
     input[type=text], input[type=email]{
         max-width: 40vw;
         height: 4em;
     }
-    textarea{
+    textarea, input[type=submit]{
         max-width: 40vw;
     }
 }
