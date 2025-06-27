@@ -470,7 +470,7 @@ footer a{
         overflow: visible;
         position: absolute;
         top: 0;
-        right: -5em;
+        right: -3em;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -479,14 +479,14 @@ footer a{
         position: relative;
     }
     nav{
+        display: flex;
         font-size: 2em;
+        position: relative;
+        right: 3rem;
     }
     label span, input{
         display: none;
     }
-
-
-
     #service-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -499,19 +499,20 @@ footer a{
         flex-direction: column;
         margin: 1em;
     }
-
     #results-grid{
         display: grid;
         grid-template-columns: 50vw 50vw;
     }
     table{
         max-width: 50%;
+        position: relative;
+        left: -4em;
     }
     #bar-chart-grid{
         max-width: 50%;
+        position: relative;
+        left: -5em;
     }
-
-
     form{
         width: 90vw;
     }
@@ -540,9 +541,16 @@ footer a{
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px){
+    nav{
+        position: absolute;
+        top: -.5em;
+        right: 4em;
+    }
     #services{
         margin: 0 auto;
         justify-content: center;
+        position: relative;
+        left: -15em;
     }
     #service-grid{
         display: grid;
@@ -557,9 +565,15 @@ footer a{
         flex-direction: column;
         margin: .5em;
     }
-    #contact h2, #contact  p, input[type=submit]{
+    table{
+        width: 50%;
         position: relative;
-        left: -3.5em;
+        left: -12em;
+    }
+    #bar-chart-grid{
+        /* width: 50%; */
+        position: relative;
+        left: -15em;
     }
     #contact{
         display:grid;
