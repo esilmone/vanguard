@@ -77,6 +77,18 @@ header{
     color: var(--blue);
 }
 
+nav{
+    position: relative;
+    /* left: 20em; */
+    /* display: flex;
+    position: absolute;
+    top: .5em;
+    right: -8em; */
+    /* display: flex;
+    position: relative;
+    margin-right: -5em; */
+}
+
 nav ul{
     width: 100%;
     margin: 0;
@@ -102,8 +114,7 @@ nav li a{
 }
 
 nav a:hover, nav input:hover{
-    background-color: var(--blue);
-    color: var(--black);
+    background-color: var(--red);
 }
 
 nav label{
@@ -145,7 +156,16 @@ input[type="checkbox"]{
 }
 
 input:checked ~ ul{
+
     max-height: 500px;
+}
+
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after{
+    transform: rotate(45deg);
 }
 
 input:checked ~ label:not(.steps) span::before, input:checked ~ label:not(.steps) span::after{
@@ -349,6 +369,18 @@ input[type=submit]{
     background-color: var(--blue);
     color: var(--white);
     border-radius: 10px;
+    transition: transform .2s ease-in-out;
+    transition: background-color .3s ease-in-out;
+    transition-timing-function: ease-in;
+}
+
+input[type=submit]:hover{
+    background-color: var(--red);
+    transition: background-color .1s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.02, 1.02);
+    transition: transform .2s;
+    transition-timing-function: ease-in-out;
 }
 
 footer{
