@@ -540,6 +540,9 @@ footer a{
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px){
+    .container{
+        max-width: 90vw;
+    }
     nav{
         position: absolute;
         top: 0;
@@ -564,6 +567,10 @@ footer a{
     }
     #contact{
         margin: 0 auto;
+     }
+    #contact-grid{
+        max-width: 90vw;
+        text-align: left;
      }
     form{
         display: grid;
