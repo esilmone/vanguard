@@ -211,7 +211,7 @@ header img{
 }
 
 h1{
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
@@ -562,37 +562,6 @@ footer a{
         flex-direction: column;
         margin: .5em;
     }
-    /* table{
-        width: 50%;
-        position: relative;
-        left: -12em;
-    }
-    #bar-chart-grid{
-        width: 50%;
-        position: relative;
-        left: -15em;
-    }
-    #contact{
-        display:grid;
-        grid-template-columns: auto auto;
-
-    }
-    #contact-grid{
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        max-width: 90vw;
-        position: relative;
-        left: -7em;
-    }
-    
-    #industry{
-        grid-column: 2 / 3;
-    } */
-    /* #contact{
-        position: relative;
-        left: -15em;
-    } */
     #contact{
         margin: 0 auto;
      }
